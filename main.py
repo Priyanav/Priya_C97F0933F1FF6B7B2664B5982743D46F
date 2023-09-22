@@ -1,8 +1,11 @@
-def factorial(n):
-  if n == 0:
-    return 1
-  else:
-    return n * factorial(n - 1)
+def linearSearchProduct(productList, targetProduct):
+  indices=[]
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+  return indices
 
-
-print(factorial(10))
+products = ["shoes","boat","loafer","shoes","sandal","shoes"]
+target = "shoes"
+result = linearSearchProduct(products, target)
+print(result)
